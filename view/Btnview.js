@@ -1,19 +1,19 @@
-
-
 export default class ButtonView {
-    constructor(view) {
-        this.create();
-        this.button.innerText = view;
+    constructor(text) {
+        this.view = text;
+    }
+
+    setController(controller) {
+        this.state = controller;
     }
 
     create() {
         this.button = document.createElement('button');
-        this.button.innerText = this.text;
+        this.button.innerText = this.view;
         document.body.append(this.button);
-        return this.button;
     }
 
-    /* setNeutral() {
+    setNeutral() {
         this.button.innerText = 'Neutral';
     }
 
@@ -27,5 +27,5 @@ export default class ButtonView {
 
     setPressed() {
         this.button.innerText = 'Pressed';
-    } */
+    }
 }

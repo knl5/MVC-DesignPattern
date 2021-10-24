@@ -1,17 +1,8 @@
-import ButtonView from "./btnview.js";
-import ButtonController from "./Btncontroller.js";
-import Button from "./Button.js";
+import Button from "./class/Button.js";
+import ButtonController from "./controller/Btncontroller.js";
+import ButtonTime from "./controller/ButtonTime.js";
+import ButtonView from "./view/Btnview.js";
 
-
-/* class App {
-    constructor() {
-        this.button = new ButtonView;
-    }
-
-    createButton() {
-        
-    }
-} */
-
-const button = new Button(new ButtonController('Neuutral'), new ButtonView('Neutral'));
-console.log(button)
+const button = new Button(new ButtonView('Neutral'), new ButtonController());
+const button1 = new Button(new ButtonView('Neutral'), new ButtonTime(2000));
+console.log(button, button1);
